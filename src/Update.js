@@ -1,37 +1,43 @@
 import { useState } from "react";
-import {useHistory} from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import React from 'react';
 import axios from 'axios';
 
-const Create = () => {
+
+const Update = () => {
+    const id = useParams();
+    console.log(id);
+    
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [time_est, settime_est] = useState(" ");
+    const [time_est, settime_est] = useState('');
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
-    const handleSubmit = (e) => { 
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const topic = {title, description, time_est};
+        const topic = { title, description, time_est };
         setIsPending(true);
         axios
-            .post('http://localhost:8082/api/topics', topic)
-            .then(()=> {
-            console.log('created topic');
-            setIsPending(false);
-            history.push('/Agenda');
-        })
+            .put('http://localhost:8082/api/topics/' + id.id, topic)
+            .then(() => {
+                console.log('updated topic');
+                setIsPending(false);
+                history.push('/Agenda/topics/' + id.id);
+            })
     };
 
-      
-
-
-    return (<div className="create">
-        <h2>Add new topic</h2>
+    return (<div className="update">
+        <h2>Update topic </h2>
+        <p>Currently editing topic id: {id.id}</p>
+        <br/><br/>
         <form onSubmit={handleSubmit}>
             <label>Title:</label>
             <input
                 type="text"
+                placeholder="New Title"
+                name='title'
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -39,6 +45,7 @@ const Create = () => {
             <label>Description:</label>
             <textarea
                 required
+                placeholder="New Description"
                 onChange={(e) => setDescription(e.target.value)}
             />
             <label>Time Estimate (minutes):</label>
@@ -60,4 +67,4 @@ const Create = () => {
     </div>);
 }
 
-export default Create;
+export default Update;

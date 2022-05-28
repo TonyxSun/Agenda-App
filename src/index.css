@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
 
 /* base styles */
 * {
   margin: 0;
-  font-family: "Playfair Display";
+  font-family: "Raleway";
   color: #333;
 }
 .navbar {
@@ -15,7 +16,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #358af1;
 }
 .navbar .links {
   margin-left: auto;
@@ -26,7 +27,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #358af1;
 }
 .content {
   max-width: 600px;
@@ -34,36 +35,36 @@
   padding: 20px;
 }
 
-/* note previews / list */
-.note-preview {
+/* topic previews / list */
+.topic-preview {
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
 }
-.note-preview:hover {
+.topic-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
-.note-preview h2 {
+.topic-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #358af1;
   margin-bottom: 8px;
 }
 
-.note-preview a {
+.topic-preview a {
   text-decoration: none;
 }
 
-/* note details page */
-.note-details h2 {
+/* topic details page */
+.topic-details h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #358af1;
   margin-bottom: 10px;
 }
-.note-details div {
+.topic-details div {
   margin: 20px 0;
 }
-.note-details button {
-  background: #f1356d;
+.topic-details button {
+  background: #358af1;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -71,7 +72,7 @@
   cursor: pointer;
 }
 
-/* create new note form */
+/* create new topic form */
 .create {
   max-width: 400px;
   margin: 0 auto;
@@ -83,7 +84,7 @@
 }
 .create h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #358af1;
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
@@ -95,7 +96,39 @@
   display: block;
 }
 .create button {
-  background: #f1356d;
+  background: #358af1;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* create new topic update form */
+.update {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.update label {
+  text-align: left;
+  display: block;
+}
+.update h2 {
+  font-size: 20px;
+  color: #358af1;
+  margin-bottom: 30px;
+}
+.update input, .update textarea, .update select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.update button {
+  background: #358af1;
   color: #fff;
   border: 0;
   padding: 8px;
