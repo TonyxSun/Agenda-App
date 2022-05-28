@@ -1,8 +1,9 @@
 # Agenda app
-<!-- ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Ftonyxsun.github.io%2FAgenda%2F)  -->
-
 
 Created for the Surfboard (Daommo) coding challenge. 
+
+Backend: https://github.com/TonyxSun/Agenda-App-Backend
+
 ## Configurations and Scripts
 
 The main scripts concerned are `npm run start` and `npm run deploy`. 
