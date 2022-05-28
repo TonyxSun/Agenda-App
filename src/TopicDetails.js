@@ -23,6 +23,7 @@ const TopicDetails = () => {
             {topic && (
                 <article>
                     <h2>{topic.title}</h2>
+                    <p>Last Updated:  {topic.updated_date.substring(0,10)}</p>
                     <p>Time Estimate:  {topic.time_est}</p>
                     <div>{topic.description}</div>
                     <button onClick={handleClick}>Delete</button>

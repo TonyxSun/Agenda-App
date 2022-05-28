@@ -2,8 +2,7 @@
 <!-- ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Ftonyxsun.github.io%2FAgenda%2F)  -->
 
 
-Created with React & JSON Server, deployed on Github Pages. 
-
+Created for the Surfboard (Daommo) coding challenge. 
 ## Configurations and Scripts
 
 The main scripts concerned are `npm run start` and `npm run deploy`. 
@@ -21,9 +20,6 @@ Builds the app for production to the build folder and deploys it to the `gh-page
     * States
     * Props
     * Routing
-* working with JSON-Server
 
-### To Do
-* Allow editing of topics
-* User authentication
-* Better visuals (there is never a "good enough" design :)
+
+
